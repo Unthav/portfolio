@@ -32,7 +32,7 @@ export function Education() {
         <div>
           <h3 className="font-semibold">{education.degree}</h3>
           <p className="text-muted">{education.college} · {education.university}</p>
-          <p className="mt-2"><span className="chip">{education.year}</span></p>
+          <p className="mt-2"><span className="chip chip-sun">{education.year}</span></p>
         </div>
       </div>
     </Card>
@@ -42,7 +42,7 @@ export function Education() {
 export function Skills() {
   return (
     <Card id="skills" title="Technical skills" icon={<Wrench size={18} />}>
-      <p className="mb-5 text-sm text-muted">Tools I use and keep learning as a student. No percentage bars, just an honest list.</p>
+      <p className="mb-5 rounded-md border border-sun-line bg-sun px-4 py-3 text-sm">Tools I use and keep learning as a student. No percentage bars, just an honest list.</p>
       <div className="space-y-5">
         {skills.map((g) => (
           <div key={g.group}>
@@ -87,7 +87,7 @@ export function Projects() {
                 {p.repoUrl ? (
                   <a href={p.repoUrl} target="_blank" rel="noopener noreferrer" className="btn"><GitBranch size={16} /> GitHub repository</a>
                 ) : (
-                  <span className="btn text-muted" aria-disabled="true">GitHub link coming soon</span>
+                  <span className="btn border-sun-line bg-sun text-muted hover:bg-sun" aria-disabled="true">GitHub link coming soon</span>
                 )}
                 {p.demoUrl && <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary"><ExternalLink size={16} /> Live demo</a>}
               </div>
@@ -105,7 +105,7 @@ export function Experience() {
     <Card id="experience" title="Experience" icon={<Briefcase size={18} />}>
       <h3 className="font-semibold">{internship.title}</h3>
       {internship.organization && <p className="text-muted">{internship.organization}</p>}
-      <p className="mt-2 flex flex-wrap gap-2"><span className="chip">Duration: {internship.duration}</span><span className="chip">Certificate: {internship.certificate}</span></p>
+      <p className="mt-2 flex flex-wrap gap-2"><span className="chip chip-sun">Duration: {internship.duration}</span><span className="chip chip-sun">Certificate: {internship.certificate}</span></p>
       <p className="mt-3 max-w-2xl text-sm text-muted">{internship.description}</p>
     </Card>
   );
@@ -118,8 +118,8 @@ export function Goals() {
       <p className="mt-5 text-sm font-semibold">Learning path <span className="font-normal text-muted">(goals, not completed achievements)</span></p>
       <ol className="mt-3 grid gap-2 sm:grid-cols-2">
         {journey.map((j, i) => (
-          <li key={j} className="flex items-center gap-3 rounded-lg border border-line px-4 py-3 text-sm">
-            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-soft text-xs font-semibold text-muted" aria-hidden>{i + 1}</span>{j}
+          <li key={j} className="flex items-center gap-3 rounded-lg border border-sun-line bg-sun px-4 py-3 text-sm">
+            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-xs font-semibold text-muted" aria-hidden>{i + 1}</span>{j}
           </li>
         ))}
       </ol>

@@ -45,9 +45,9 @@ export default function Hero() {
           </svg>
         </div>
       </div>
-      <dl className="grid grid-cols-2 border-t border-line sm:grid-cols-4">
+      <dl className="grid grid-cols-2 border-t border-sun-line bg-sun sm:grid-cols-4">
         {stats.map((s) => (
-          <div key={s.label} className="border-b border-r border-line px-5 py-3 last:border-r-0 sm:border-b-0">
+          <div key={s.label} className="border-b border-r border-sun-line px-5 py-3 last:border-r-0 sm:border-b-0">
             <dt className="text-xs uppercase tracking-wide text-muted">{s.label}</dt>
             <dd className="font-semibold">{s.value}</dd>
           </div>

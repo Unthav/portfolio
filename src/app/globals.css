@@ -8,6 +8,8 @@
   --color-soft: #f8f9fa;
   --color-accent: #20beff;
   --color-link: #0b6fa4;
+  --color-sun: #fef7e0;
+  --color-sun-line: #f3dfa2;
   --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -24,6 +26,7 @@ body { background: #fff; color: var(--color-fg); font-family: var(--font-sans); 
 .btn:hover { background: var(--color-soft); border-color: #bdc1c6; }
 .btn-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-fg); }
 .btn-primary:hover { background: #5dd0ff; border-color: #5dd0ff; }
+.chip-sun { background: var(--color-sun); border-color: var(--color-sun-line); color: var(--color-fg); }
 .chip { display: inline-block; border: 1px solid var(--color-line); border-radius: 999px; padding: 0.15rem 0.75rem; font-size: 0.85rem; color: var(--color-muted); background: #fff; }
 
 .draw { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 1.8s .3s ease-out forwards; }
