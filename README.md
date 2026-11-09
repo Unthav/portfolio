@@ -1,45 +1,161 @@
-# Bishal Deka: Portfolio
+# Bishal Deka | Personal Portfolio
 
-Next.js (App Router) · React · TypeScript · Tailwind CSS v4 · Lucide icons. No backend, database, analytics or API keys.
+A modern, responsive personal portfolio website showcasing my journey as a BCA student, my interest in Machine Learning, technical skills, projects, and career goals.
 
-**Edit everything in one file:** `src/data/site.ts` (profile, links, skills, projects, internship, learning path).
+🌐 **Live Website:** [portfolio-rho-blush-98.vercel.app](https://portfolio-rho-blush-98.vercel.app/)
 
-## 1. Run locally on Windows
-1. Install Node.js LTS (20.9 or newer) from https://nodejs.org and Git from https://git-scm.com.
-2. Open PowerShell in this folder:
-   ```
-   npm install
-   npm run dev
-   ```
-3. Open http://localhost:3000.
-4. Before deploying: `npm run typecheck`, `npm run build`, `npm audit`.
+## About Me
 
-## 2. Upload to GitHub
-1. Create an empty repository at https://github.com/new (e.g. `portfolio`). Do not add a README there.
-2. In PowerShell inside this folder:
-   ```
-   git init
-   git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
-   git push -u origin main
-   ```
-   `.gitignore` already excludes `node_modules`, `.next` and `.env*`.
+Hi, I'm **Bishal Deka**, a third-year BCA student at Mangaldai College, under Gauhati University.
 
-## 3. Deploy on Vercel (free Hobby plan)
-1. Sign in at https://vercel.com with your GitHub account.
-2. Add New → Project → import your `portfolio` repo. Next.js is detected automatically; keep the defaults.
-3. Deploy. You get a free `https://your-project.vercel.app` URL with HTTPS.
-4. Optional: in Project Settings → Environment Variables add `NEXT_PUBLIC_SITE_URL` = your final URL (used for sitemap and social metadata), then redeploy.
-Every `git push` to `main` redeploys automatically.
+I'm passionate about Machine Learning, Python, and solving real-world problems through technology.
 
-## 4. Information you still need to provide
-- GitHub profile URL → `site.github`
-- LinkedIn URL → `site.linkedin`
-- Resume PDF → put in `/public/resume.pdf`, set `site.resumeUrl = "/resume.pdf"`
-- Project repository URL → `projects[0].repoUrl`; live demo URL only if one exists → `demoUrl`
-- Internship organization name (optional) → `internship.organization`
-- Optional: social preview image (`src/app/opengraph-image.png`, 1200×630)
+My goal is to become a Machine Learning expert by developing strong programming foundations, exploring machine learning algorithms, and building practical projects.
 
-Until you add them, those buttons stay hidden or show "coming soon". Nothing is invented.
+## Features
+
+- Modern and responsive portfolio design
+- Dark and light mode
+- Clean and minimal user interface
+- Smooth animations and interactions
+- About Me section
+- Education details
+- Technical skills showcase
+- Machine Learning project showcase
+- Internship experience
+- Career goals and learning roadmap
+- Contact section with email and phone details
+- Mobile-friendly layout
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js | React-based web framework |
+| React | User interface |
+| TypeScript | Type-safe development |
+| Tailwind CSS | Styling and responsive design |
+| Framer Motion | Animations and interactions |
+| Lucide Icons | Interface icons |
+| Vercel | Website hosting and deployment |
+| Git & GitHub | Version control |
+
+## Portfolio Sections
+
+### 1. About Me
+Introduction, academic background, interests, and career objectives.
+
+### 2. Education
+- Bachelor of Computer Applications (BCA)
+- Mangaldai College
+- Gauhati University
+- Third Year / Final Year
+
+### 3. Technical Skills
+- **Programming:** Python
+- **Machine Learning:** ML fundamentals, data preprocessing, feature engineering, model training and evaluation.
+- **Tools:** Jupyter Notebook, Pandas, NumPy, Scikit-learn, Git and GitHub.
+
+### 4. Projects
+
+**Student Performance Prediction**
+
+A Machine Learning project focused on predicting student academic performance using student-related data.
+
+Technologies:
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Jupyter Notebook
+
+### 5. Experience
+
+**Machine Learning Intern**
+- Duration: 1 Month
+- Internship certificate completed.
+
+### 6. Career Goals
+
+My learning roadmap focuses on:
+
+1. Python and programming foundations
+2. Mathematics and statistics for Machine Learning
+3. Data analysis and preprocessing
+4. Machine Learning algorithms
+5. Real-world Machine Learning projects
+6. Advanced ML and deployment
+
+## Run Locally
+
+Follow these steps to run the project on your computer.
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+**2. Open the project directory**
+
+```bash
+cd your-project-folder
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+**5. Open in your browser**
+
+```text
+http://localhost:3000
+```
+
+## Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To run the production version locally:
+
+```bash
+npm start
+```
+
+## Deployment
+
+This portfolio is hosted on **Vercel**.
+
+Deployment workflow:
+
+1. Push the project to GitHub.
+2. Import the GitHub repository into Vercel.
+3. Configure the Next.js project.
+4. Deploy the website.
+5. Future pushes to the connected branch can trigger automatic deployments.
+
+## Contact
+
+**Bishal Deka**
+
+- Email: bishal_deka@icloud.com
+- Phone: +91 6002711646
+- Portfolio: https://portfolio-rho-blush-98.vercel.app/
+
+---
+
+⭐ Thanks for visiting my portfolio!
+
+*Always learning, building, and improving my Machine Learning skills.*
