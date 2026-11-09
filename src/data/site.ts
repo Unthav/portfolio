@@ -7,7 +7,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
  
-  github: null as string | "https://github.com/Unthav",
+  github: null as string | "https://github.com/Unthav", 
   linkedin: null as string | null, // e.g. "https://www.linkedin.com/in/your-id"
   resumeUrl: null as string | null, // put resume.pdf in /public, then "/resume.pdf"
 };
