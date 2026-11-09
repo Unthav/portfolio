@@ -4,7 +4,7 @@ export const site = {
   email: "bishal_deka@icloud.com",
   phone: "+91 6002711646",
   phoneHref: "tel:+916002711646",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-rho-blush-98.vercel.app",
 
  
   github: "https://github.com/Unthav", 
