@@ -1,8 +1,3 @@
-// ───────────────────────────────────────────────────────────
-// Edit this file to update the whole site. Nothing else needs touching.
-// Set a value to null to hide the matching button/link.
-// ───────────────────────────────────────────────────────────
-
 export const site = {
   name: "Bishal Deka",
   status: "Aspiring Machine Learning Engineer",
@@ -11,8 +6,8 @@ export const site = {
   phoneHref: "tel:+916002711646",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
-  // Add real URLs when you have them. Leave null until then.
-  github: null as string | null,   // e.g. "https://github.com/your-username"
+ 
+  github: null as string | "https://github.com/Unthav",
   linkedin: null as string | null, // e.g. "https://www.linkedin.com/in/your-id"
   resumeUrl: null as string | null, // put resume.pdf in /public, then "/resume.pdf"
 };
@@ -51,11 +46,11 @@ export type Project = {
   category: string;
   description: string;
   tags: string[];
-  repoUrl?: string; // add when the repository is public
-  demoUrl?: string; // add only if a live demo exists
+  repoUrl?: string; 
+  demoUrl?: string; 
 };
 
-// Add a new project by copying one object into this array.
+
 export const projects: Project[] = [
   {
     title: "Student Performance Prediction",
@@ -70,7 +65,7 @@ export const internship = {
   title: "Machine Learning Intern",
   duration: "1 Month",
   certificate: "Completed",
-  organization: undefined as string | undefined, // add the real organization name when you want it shown
+  organization: undefined as string | undefined, 
   description:
     "Completed a one-month Machine Learning internship, gaining exposure to practical machine learning concepts and workflows.",
 };
