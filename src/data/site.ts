@@ -1,6 +1,6 @@
 export const site = {
   name: "Bishal Deka",
-  status: "Aspiring Machine Learning Engineer",
+  status: "Machine Learning Aspiring",
   email: "bishal_deka@icloud.com",
   phone: "+91 6002711646",
   phoneHref: "tel:+916002711646",
