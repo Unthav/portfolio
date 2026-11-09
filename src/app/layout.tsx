@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource-variable/instrument-sans";
 import "./globals.css";
 import { site } from "@/data/site";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#0d1220", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: "#ffffff", colorScheme: "light" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

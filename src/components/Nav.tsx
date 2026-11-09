@@ -1,45 +1,63 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { nav, site } from "@/data/site";
+import { House, User, GraduationCap, Wrench, Code, Briefcase, Flag, Mail } from "lucide-react";
 
-export default function Nav() {
-  const [open, setOpen] = useState(false);
+const items = [
+  { id: "home", label: "Home", Icon: House },
+  { id: "about", label: "About", Icon: User },
+  { id: "education", label: "Education", Icon: GraduationCap },
+  { id: "skills", label: "Skills", Icon: Wrench },
+  { id: "projects", label: "Projects", Icon: Code },
+  { id: "experience", label: "Experience", Icon: Briefcase },
+  { id: "goals", label: "Goals", Icon: Flag },
+  { id: "contact", label: "Contact", Icon: Mail },
+];
 
+function useActive() {
+  const [active, setActive] = useState("home");
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      { rootMargin: "-25% 0px -65% 0px" },
+    );
+    items.forEach((i) => { const el = document.getElementById(i.id); if (el) obs.observe(el); });
+    return () => obs.disconnect();
   }, []);
+  return active;
+}
 
+export function Sidebar() {
+  const active = useActive();
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-ink/80 backdrop-blur">
-      <nav aria-label="Primary" className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <a href="#home" className="font-display text-lg font-semibold">{site.name}</a>
-        <ul className="hidden gap-7 text-sm text-muted md:flex">
-          {nav.slice(1).map((n) => (
-            <li key={n.href}><a href={n.href} className="hover:text-fg">{n.label}</a></li>
-          ))}
-        </ul>
-        <button
-          className="rounded p-2 md:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </nav>
-      {open && (
-        <ul id="mobile-menu" className="border-t border-line bg-ink px-5 py-3 md:hidden">
-          {nav.map((n) => (
-            <li key={n.href}>
-              <a href={n.href} onClick={() => setOpen(false)} className="block py-2.5 text-muted hover:text-fg">{n.label}</a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </header>
+    <nav aria-label="Primary" className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-56 shrink-0 border-r border-line px-3 py-4 lg:block">
+      <ul className="space-y-1">
+        {items.map(({ id, label, Icon }) => (
+          <li key={id}>
+            <a href={`#${id}`} aria-current={active === id ? "true" : undefined}
+              className={`flex items-center gap-3 rounded-full px-4 py-2 text-sm ${active === id ? "bg-soft font-semibold text-fg" : "text-muted hover:bg-soft hover:text-fg"}`}>
+              <Icon size={18} aria-hidden /> {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+export function MobileTabs() {
+  const active = useActive();
+  return (
+    <nav aria-label="Sections" className="sticky top-14 z-40 overflow-x-auto border-b border-line bg-white lg:hidden">
+      <ul className="flex min-w-max px-2">
+        {items.map(({ id, label }) => (
+          <li key={id}>
+            <a href={`#${id}`} aria-current={active === id ? "true" : undefined}
+              className={`block border-b-2 px-3 py-2.5 text-sm ${active === id ? "border-accent font-semibold text-fg" : "border-transparent text-muted"}`}>
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
