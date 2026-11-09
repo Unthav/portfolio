@@ -15,10 +15,10 @@ function Card({ id, title, icon, children }: { id: string; title: string; icon: 
 export function About() {
   return (
     <Card id="about" title="About me" icon={<User size={18} />}>
-      <div className="max-w-3xl space-y-4 text-fg">
-        <p>I&rsquo;m a third-year student pursuing a Bachelor of Computer Applications at Mangaldai College, Gauhati University. What draws me to <strong>Machine Learning</strong> is the idea of getting a computer to learn patterns from data instead of being told every rule.</p>
-        <p>I&rsquo;ve completed a <strong>one-month Machine Learning internship</strong> and built my first project, a <strong>student performance predictor</strong>. I learn best <em>by doing</em>: working with data, seeing where a model falls short, and working out why.</p>
-        <p>My goal is to become a <strong>Machine Learning expert</strong>. I&rsquo;m early on that path and I&rsquo;d rather say so than overstate it. For now I&rsquo;m focused on strong foundations, steady learning, and building projects that are actually useful.</p>
+      <div className="max-w-3xl space-y-4 text-muted">
+        <p>I&rsquo;m a third-year student pursuing a Bachelor of Computer Applications at Mangaldai College, Gauhati University. What draws me to Machine Learning is the idea of getting a computer to learn patterns from data instead of being told every rule.</p>
+        <p>I&rsquo;ve completed a one-month Machine Learning internship and built my first project, a student performance predictor. I learn best by doing: working with data, seeing where a model falls short, and working out why.</p>
+        <p>My goal is to become a Machine Learning expert. I&rsquo;m early on that path and I&rsquo;d rather say so than overstate it. For now I&rsquo;m focused on strong foundations, steady learning, and building projects that are actually useful.</p>
       </div>
     </Card>
   );
@@ -46,7 +46,7 @@ export function Skills() {
       <div className="space-y-5">
         {skills.map((g) => (
           <div key={g.group}>
-            <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">{g.group}</h3>
+            <h3 className="mb-2 text-sm font-semibold">{g.group}</h3>
             <ul className="flex flex-wrap gap-2">{g.items.map((s) => <li key={s} className="chip">{s}</li>)}</ul>
           </div>
         ))}
@@ -80,8 +80,8 @@ export function Projects() {
             <div className="flex items-center border-b border-line bg-soft p-4 md:col-span-5 md:border-b-0 md:border-r"><Workflow /></div>
             <div className="p-5 md:col-span-7">
               <p className="text-xs font-semibold uppercase tracking-wide text-link">{p.category}</p>
-              <h3 className="mt-1 text-xl font-bold tracking-tight">{p.title}</h3>
-              <p className="mt-2 text-sm text-fg">{p.description}</p>
+              <h3 className="mt-1 text-lg font-semibold">{p.title}</h3>
+              <p className="mt-2 text-sm text-muted">{p.description}</p>
               <ul className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => <li key={t} className="chip">{t}</li>)}</ul>
               <div className="mt-4 flex flex-wrap gap-3">
                 {p.repoUrl ? (
@@ -106,7 +106,7 @@ export function Experience() {
       <h3 className="font-semibold">{internship.title}</h3>
       {internship.organization && <p className="text-muted">{internship.organization}</p>}
       <p className="mt-2 flex flex-wrap gap-2"><span className="chip chip-sun">Duration: {internship.duration}</span><span className="chip chip-sun">Certificate: {internship.certificate}</span></p>
-      <p className="mt-3 max-w-2xl text-sm text-fg">{internship.description}</p>
+      <p className="mt-3 max-w-2xl text-sm text-muted">{internship.description}</p>
     </Card>
   );
 }
@@ -114,7 +114,7 @@ export function Experience() {
 export function Goals() {
   return (
     <Card id="goals" title="Career goals" icon={<Flag size={18} />}>
-      <blockquote className="max-w-3xl border-l-4 border-accent pl-4 text-lg leading-relaxed text-fg">My goal is to develop <strong>strong foundations</strong> in Machine Learning, improve my <strong>problem-solving ability</strong>, and eventually build <strong>intelligent systems</strong> that solve practical problems.</blockquote>
+      <p className="max-w-3xl text-muted">My goal is to develop strong foundations in Machine Learning, improve my problem-solving ability, and eventually build intelligent systems that solve practical problems.</p>
       <p className="mt-5 text-sm font-semibold">Learning path <span className="font-normal text-muted">(goals, not completed achievements)</span></p>
       <ol className="mt-3 grid gap-2 sm:grid-cols-2">
         {journey.map((j, i) => (
@@ -132,8 +132,8 @@ export function Contact() {
     <Card id="contact" title="Contact" icon={<AtSign size={18} />}>
       <h3 className="max-w-xl text-2xl font-bold tracking-tight">Have an opportunity or project in mind?</h3>
       <dl className="mt-4 space-y-1 text-sm text-muted">
-        <div className="flex gap-2"><dt>Email:</dt><dd><a className="text-link underline underline-offset-2" href={`mailto:${site.email}`}><strong>{site.email}</strong></a></dd></div>
-        <div className="flex gap-2"><dt>Phone:</dt><dd><a className="text-link underline underline-offset-2" href={site.phoneHref}><strong>{site.phone}</strong></a></dd></div>
+        <div className="flex gap-2"><dt>Email:</dt><dd><a className="text-link underline underline-offset-2" href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+        <div className="flex gap-2"><dt>Phone:</dt><dd><a className="text-link underline underline-offset-2" href={site.phoneHref}>{site.phone}</a></dd></div>
       </dl>
       <div className="mt-5 flex flex-wrap gap-3">
         <a href={`mailto:${site.email}`} className="btn btn-primary"><Mail size={16} /> Email Me</a>

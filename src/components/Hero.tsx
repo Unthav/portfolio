@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="md:col-span-7">
           <div className="-mt-10 grid h-20 w-20 place-items-center rounded-full border-4 border-white bg-fg text-2xl font-bold text-white" aria-hidden>BD</div>
           <p className="mt-4 text-muted">Hi, I&rsquo;m {site.name}</p>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Building My Future in <span className="mark">Machine Learning.</span></h1>
+          <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Building My Future in Machine Learning.</h1>
           <p className="mt-3"><span className="chip">{site.status}</span></p>
           <p className="mt-4 max-w-xl text-muted">
             I&rsquo;m a third-year BCA student at Mangaldai College under Gauhati University, passionate about Machine Learning, Python, and solving real-world problems through technology.

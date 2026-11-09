@@ -3,7 +3,7 @@
 
 @theme {
   --color-fg: #202124;
-  --color-muted: #3c4043;
+  --color-muted: #5f6368;
   --color-line: #dadce0;
   --color-soft: #f8f9fa;
   --color-accent: #20beff;
@@ -26,7 +26,6 @@ body { background: #fff; color: var(--color-fg); font-family: var(--font-sans); 
 .btn:hover { background: var(--color-soft); border-color: #bdc1c6; }
 .btn-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-fg); }
 .btn-primary:hover { background: #5dd0ff; border-color: #5dd0ff; }
-.mark { background: linear-gradient(transparent 58%, #ffe58f 58%); padding: 0 .1em; }
 .chip-sun { background: var(--color-sun); border-color: var(--color-sun-line); color: var(--color-fg); }
 .chip { display: inline-block; border: 1px solid var(--color-line); border-radius: 999px; padding: 0.15rem 0.75rem; font-size: 0.85rem; color: var(--color-muted); background: #fff; }
 
