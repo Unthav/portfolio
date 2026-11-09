@@ -7,7 +7,8 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-rho-blush-98.vercel.app",
 
  
-  github: "https://github.com/Unthav", 
+  github: "https://github.com/Unthav",
+  instagram: "https://www.instagram.com/_unt_hav_",
   linkedin: null as string | null,
   resumeUrl: null as string | null, // put resume.pdf in /public, then "/resume.pdf"
 };
