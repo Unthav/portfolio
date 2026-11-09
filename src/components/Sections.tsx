@@ -15,7 +15,7 @@ function Card({ id, title, icon, children }: { id: string; title: string; icon: 
 export function About() {
   return (
     <Card id="about" title="About me" icon={<User size={18} />}>
-      <div className="max-w-3xl space-y-4 text-muted">
+      <div className="max-w-3xl space-y-4 text-fg">
         <p>I&rsquo;m a third-year student pursuing a Bachelor of Computer Applications at Mangaldai College, Gauhati University. What draws me to Machine Learning is the idea of getting a computer to learn patterns from data instead of being told every rule.</p>
         <p>I&rsquo;ve completed a one-month Machine Learning internship and built my first project, a student performance predictor. I learn best by doing: working with data, seeing where a model falls short, and working out why.</p>
         <p>My goal is to become a Machine Learning expert. I&rsquo;m early on that path and I&rsquo;d rather say so than overstate it. For now I&rsquo;m focused on strong foundations, steady learning, and building projects that are actually useful.</p>
@@ -81,7 +81,7 @@ export function Projects() {
             <div className="p-5 md:col-span-7">
               <p className="text-xs font-semibold uppercase tracking-wide text-link">{p.category}</p>
               <h3 className="mt-1 text-lg font-semibold">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted">{p.description}</p>
+              <p className="mt-2 text-sm text-fg">{p.description}</p>
               <ul className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => <li key={t} className="chip">{t}</li>)}</ul>
               <div className="mt-4 flex flex-wrap gap-3">
                 {p.repoUrl ? (
@@ -106,7 +106,7 @@ export function Experience() {
       <h3 className="font-semibold">{internship.title}</h3>
       {internship.organization && <p className="text-muted">{internship.organization}</p>}
       <p className="mt-2 flex flex-wrap gap-2"><span className="chip chip-sun">Duration: {internship.duration}</span><span className="chip chip-sun">Certificate: {internship.certificate}</span></p>
-      <p className="mt-3 max-w-2xl text-sm text-muted">{internship.description}</p>
+      <p className="mt-3 max-w-2xl text-sm text-fg">{internship.description}</p>
     </Card>
   );
 }
@@ -114,7 +114,7 @@ export function Experience() {
 export function Goals() {
   return (
     <Card id="goals" title="Career goals" icon={<Flag size={18} />}>
-      <p className="max-w-3xl text-muted">My goal is to develop strong foundations in Machine Learning, improve my problem-solving ability, and eventually build intelligent systems that solve practical problems.</p>
+      <p className="max-w-3xl text-fg">My goal is to develop strong foundations in Machine Learning, improve my problem-solving ability, and eventually build intelligent systems that solve practical problems.</p>
       <p className="mt-5 text-sm font-semibold">Learning path <span className="font-normal text-muted">(goals, not completed achievements)</span></p>
       <ol className="mt-3 grid gap-2 sm:grid-cols-2">
         {journey.map((j, i) => (
