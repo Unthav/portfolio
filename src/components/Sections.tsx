@@ -131,10 +131,6 @@ export function Contact() {
   return (
     <Card id="contact" title="Contact" icon={<AtSign size={18} />}>
       <h3 className="max-w-xl text-2xl font-bold tracking-tight">Have an opportunity or project in mind?</h3>
-      <dl className="mt-4 space-y-1 text-sm text-muted">
-        <div className="flex gap-2"><dt>Email:</dt><dd><a className="text-link underline underline-offset-2" href={`mailto:${site.email}`}>{site.email}</a></dd></div>
-        <div className="flex gap-2"><dt>Phone:</dt><dd><a className="text-link underline underline-offset-2" href={site.phoneHref}>{site.phone}</a></dd></div>
-      </dl>
       <div className="mt-5 flex flex-wrap gap-3">
         <a href={`mailto:${site.email}`} className="btn btn-primary"><Mail size={16} /> Email Me</a>
         <a href={site.phoneHref} className="btn"><Phone size={16} /> Call</a>
