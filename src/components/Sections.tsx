@@ -107,97 +107,27 @@ function Workflow() {
 export function Projects() {
   return (
     <Card id="projects" title="Projects" icon={<Code size={18} />}>
-      <div className="space-y-5">
+      <div className="space-y-4">
         {projects.map((p) => (
-          <article
-            key={p.title}
-            className="overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:border-accent"
-          >
-            <div className="grid md:grid-cols-12">
-              {/* Project visual */}
-              <div className="flex min-h-48 items-center justify-center border-b border-line bg-soft p-6 md:col-span-4 md:border-b-0 md:border-r">
-                <div className="text-center">
-                  <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-accent text-fg">
-                    <Workflow size={32} />
-                  </div>
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-muted">
-                    Machine Learning Project
-                  </p>
-                </div>
-              </div>
-
-              {/* Project details */}
-              <div className="p-5 md:col-span-8 md:p-6">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="rounded-full bg-soft px-3 py-1 text-xs font-semibold text-link">
-                    {p.category}
-                  </span>
-                </div>
-
-                <h3 className="mt-3 text-xl font-bold text-fg">
-                  {p.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-muted">
-                  {p.description}
-                </p>
-
-                {/* Technologies */}
-                <div className="mt-5">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted">
-                    Technologies Used
-                  </p>
-
-                  <ul className="flex flex-wrap gap-2">
-                    {p.tags.map((tag) => (
-                      <li key={tag} className="chip">
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Action buttons */}
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {p.repoUrl ? (
-                    <a
-                      href={p.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn"
-                    >
-                      <GitBranch size={16} />
-                      View Source Code
-                    </a>
-                  ) : (
-                    <span
-                      className="btn cursor-not-allowed opacity-60"
-                      aria-disabled="true"
-                    >
-                      GitHub link coming soon
-                    </span>
-                  )}
-
-                  {p.demoUrl && (
-                    <a
-                      href={p.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  )}
-                </div>
+          <article key={p.title} className="grid overflow-hidden rounded-lg border border-line md:grid-cols-12">
+            <div className="flex items-center border-b border-line bg-soft p-4 md:col-span-5 md:border-b-0 md:border-r"><Workflow /></div>
+            <div className="p-5 md:col-span-7">
+              <p className="text-xs font-semibold uppercase tracking-wide text-link">{p.category}</p>
+              <h3 className="mt-1 text-lg font-semibold">{p.title}</h3>
+              <p className="mt-2 text-sm text-muted">{p.description}</p>
+              <ul className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => <li key={t} className="chip">{t}</li>)}</ul>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {p.repoUrl ? (
+                  <a href={p.repoUrl} target="_blank" rel="noopener noreferrer" className="btn"><GitBranch size={16} /> GitHub repository</a>
+                ) : (
+                  <span className="btn border-sun-line bg-sun text-muted hover:bg-sun" aria-disabled="true">GitHub link coming soon</span>
+                )}
+                {p.demoUrl && <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary"><ExternalLink size={16} /> Live demo</a>}
               </div>
             </div>
           </article>
         ))}
-
-        <p className="text-center text-sm text-muted">
-          More projects coming soon as I continue learning and building.
-        </p>
+        <p className="text-sm text-muted">More projects will be added here as I build them.</p>
       </div>
     </Card>
   );
