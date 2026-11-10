@@ -16,9 +16,15 @@ export function About() {
   return (
     <Card id="about" title="About me" icon={<User size={18} />}>
       <div className="max-w-3xl space-y-4 text-muted">
-        <p>I&rsquo;m a third-year student pursuing a Bachelor of Computer Applications at Mangaldai College, Gauhati University. What draws me to Machine Learning is the idea of getting a computer to learn patterns from data instead of being told every rule.</p>
-        <p>I&rsquo;ve completed a one-month Machine Learning internship and built my first project, a student performance predictor. I learn best by doing: working with data, seeing where a model falls short, and working out why.</p>
-        <p>My goal is to become a Machine Learning expert. I&rsquo;m early on that path and I&rsquo;d rather say so than overstate it. For now I&rsquo;m focused on strong foundations, steady learning, and building projects that are actually useful.</p>
+        <p>I&rsquo;m I'm **Bishal Deka**, a third-year Bachelor of Computer Applications (BCA) student at Mangaldai College, affiliated with Gauhati University, with a growing passion for Machine Learning, Python, and data-driven problem solving.
+
+          I'm focused on building a strong foundation in programming, data analysis, and Machine Learning. I enjoy exploring how data can be transformed into meaningful insights and how intelligent systems can solve practical problems.
+
+          Through hands-on projects, including my **Student Performance Prediction** project, and a one-month Machine Learning internship, I've started developing practical experience with Python, data preprocessing, model development, and machine learning concepts.
+
+          I'm continuously learning, experimenting with new technologies, and improving my problem-solving skills. My long-term goal is to become a skilled **Machine Learning Engineer** and contribute to building intelligent solutions that make a real-world impact.
+
+          I believe in learning by building, improving through experimentation, and turning ideas into working projects.</p>
       </div>
     </Card>
   );
