@@ -44,7 +44,7 @@ export function Education() {
 export function Skills() {
   return (
     <Card id="skills" title="Technical skills" icon={<Wrench size={18} />}>
-      <p className="mb-5 rounded-md border border-sun-line bg-sun px-4 py-3 text-sm">Tools I use and keep learning as a student. No percentage bars, just an honest list.</p>
+      <p className="mb-5 rounded-md border border-sun-line bg-sun px-4 py-3 text-sm">Technologies and tools I'm learning and using to build practical projects.</p>
       <div className="space-y-5">
         {skills.map((g) => (
           <div key={g.group}>
