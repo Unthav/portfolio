@@ -72,15 +72,23 @@ export type Project = {
 };
 
 
+
 export const projects: Project[] = [
   {
     title: "Student Performance Prediction",
     category: "Machine Learning",
     description:
-      "A machine learning project focused on predicting student academic performance using relevant student-related data. The project explores data preprocessing, feature selection, model training, and performance evaluation.",
-    tags: ["Python", "Pandas", "NumPy", "Scikit-learn", "Jupyter Notebook"],
+      "A Machine Learning project that uses student-related data to predict academic performance. The project focuses on data preprocessing, exploratory data analysis, feature selection, model development, and performance evaluation.",
+    tags: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Jupyter Notebook",
+    ],
   },
 ];
+
 
 export const internship = {
   title: "Machine Learning Intern",
