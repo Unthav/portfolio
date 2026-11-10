@@ -30,17 +30,37 @@ export const education = {
   year: "Third Year / Final Year",
 };
 
+
 export const skills = [
-  { group: "Programming", items: ["Python"] },
+  {
+    group: "Programming",
+    items: ["Python"],
+  },
+  {
+    group: "Data Analysis",
+    items: ["Pandas", "NumPy", "Data Manipulation", "Data Preprocessing"],
+  },
   {
     group: "Machine Learning",
-    items: ["Machine Learning fundamentals", "Data preprocessing", "Feature engineering", "Model training and evaluation"],
+    items: [
+      "Machine Learning Fundamentals",
+      "Feature Engineering",
+      "Model Training",
+      "Model Evaluation",
+      "Scikit-learn",
+    ],
   },
   {
-    group: "Tools and Technologies",
-    items: ["Jupyter Notebook", "Pandas", "NumPy", "Scikit-learn", "Git and GitHub"],
+    group: "Tools & Development",
+    items: [
+      "Jupyter Notebook",
+      "Git",
+      "GitHub",
+      "VS Code",
+    ],
   },
 ];
+
 
 export type Project = {
   title: string;
