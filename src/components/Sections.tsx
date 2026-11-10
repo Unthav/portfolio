@@ -16,15 +16,11 @@ export function About() {
   return (
     <Card id="about" title="About me" icon={<User size={18} />}>
       <div className="max-w-3xl space-y-4 text-muted">
-        <p>I&rsquo;m I'm **Bishal Deka**, a third-year Bachelor of Computer Applications (BCA) student at Mangaldai College, affiliated with Gauhati University, with a growing passion for Machine Learning, Python, and data-driven problem solving.
-
-          I'm focused on building a strong foundation in programming, data analysis, and Machine Learning. I enjoy exploring how data can be transformed into meaningful insights and how intelligent systems can solve practical problems.
-
-          Through hands-on projects, including my **Student Performance Prediction** project, and a one-month Machine Learning internship, I've started developing practical experience with Python, data preprocessing, model development, and machine learning concepts.
-
-          I'm continuously learning, experimenting with new technologies, and improving my problem-solving skills. My long-term goal is to become a skilled **Machine Learning Engineer** and contribute to building intelligent solutions that make a real-world impact.
-
-          I believe in learning by building, improving through experimentation, and turning ideas into working projects.</p>
+        <p>I&rsquo;m I'm Bishal Deka, a third-year Bachelor of Computer Applications (BCA) student at Mangaldai College, affiliated with Gauhati University, with a growing passion for Machine Learning, Python, and data-driven problem solving.</p>
+        <p>I&rsquo;m I'm focused on building a strong foundation in programming, data analysis, and Machine Learning. I enjoy exploring how data can be transformed into meaningful insights and how intelligent systems can solve practical problems.</p>
+        <p>I&rsquo;m Through hands-on projects, including my Student Performance Prediction project, and a one-month Machine Learning internship, I've started developing practical experience with Python, data preprocessing, model development, and machine learning concepts.</p>
+        <p>I&rsquo;m I'm continuously learning, experimenting with new technologies, and improving my problem-solving skills. My long-term goal is to become a skilled Machine Learning Engineer and contribute to building intelligent solutions that make a real-world impact.</p>
+        <p>I&rsquo;m I believe in learning by building, improving through experimentation, and turning ideas into working projects.</p>
       </div>
     </Card>
   );
