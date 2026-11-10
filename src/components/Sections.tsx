@@ -12,19 +12,49 @@ function Card({ id, title, icon, children }: { id: string; title: string; icon: 
   );
 }
 
+
 export function About() {
   return (
     <Card id="about" title="About me" icon={<User size={18} />}>
-      <div className="max-w-3xl space-y-4 text-muted">
-        <p>I&rsquo;m Bishal Deka, a third-year Bachelor of Computer Applications (BCA) student at Mangaldai College, affiliated with Gauhati University, with a growing passion for Machine Learning, Python, and data-driven problem solving.</p>
-        <p>Focused on building a strong foundation in programming, data analysis, and Machine Learning. I enjoy exploring how data can be transformed into meaningful insights and how intelligent systems can solve practical problems.</p>
-        <p>Through hands-on projects, including my Student Performance Prediction project, and a one-month Machine Learning internship, I've started developing practical experience with Python, data preprocessing, model development, and machine learning concepts.</p>
-        <p>Continuously learning, experimenting with new technologies, and improving my problem-solving skills. My long-term goal is to become a skilled Machine Learning Engineer and contribute to building intelligent solutions that make a real-world impact.</p>
-        <p>I believe in learning by building, improving through experimentation, and turning ideas into working projects.</p>
+      <div className="max-w-3xl space-y-4 text-sm leading-7 text-muted">
+        <p>
+          I'm <strong className="font-semibold text-fg">Bishal Deka</strong>,
+          a third-year Bachelor of Computer Applications (BCA) student at
+          Mangaldai College, affiliated with Gauhati University. I have a
+          growing interest in Machine Learning, Python, and data-driven
+          problem solving.
+        </p>
+
+        <p>
+          I'm focused on developing strong foundations in programming,
+          data analysis, and Machine Learning. I enjoy exploring how data
+          can be transformed into meaningful insights and how intelligent
+          systems can solve practical problems.
+        </p>
+
+        <p>
+          Through hands-on projects, including my Student Performance
+          Prediction project, and a one-month Machine Learning internship,
+          I've started gaining practical experience in Python, data
+          preprocessing, model development, and evaluation.
+        </p>
+
+        <p>
+          I'm continuously learning, experimenting with new technologies,
+          and strengthening my problem-solving skills. My long-term goal
+          is to become a skilled Machine Learning Engineer and contribute
+          to building intelligent solutions with real-world impact.
+        </p>
+
+        <p>
+          I believe in learning by building, improving through
+          experimentation, and turning ideas into working projects.
+        </p>
       </div>
     </Card>
   );
 }
+
 
 export function Education() {
   return (
