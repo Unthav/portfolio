@@ -1,108 +1,108 @@
-@import “tailwindcss” source(none);
-@source “../”;
+@import "tailwindcss" source(none);
+@source "../";
 
 @theme {
-–color-fg: #3B2418;
-–color-muted: rgb(59 36 24 / 72%);
-–color-line: rgb(59 36 24 / 18%);
-–color-soft: #F2E8DA;
-–color-accent: #8EC5FF;
-–color-link: #3B2418;
-–color-sun: #F2E8DA;
-–color-sun-line: rgb(59 36 24 / 25%);
-–font-sans: “Instrument Sans Variable”, ui-sans-serif, system-ui, sans-serif;
+  --color-fg: #3B2418;
+  --color-muted: rgb(59 36 24 / 72%);
+  --color-line: rgb(59 36 24 / 18%);
+  --color-soft: #F2E8DA;
+  --color-accent: #8EC5FF;
+  --color-link: #3B2418;
+  --color-sun: #F2E8DA;
+  --color-sun-line: rgb(59 36 24 / 25%);
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-background: #F2E8DA;
-color: var(–color-fg);
-font-family: var(–font-sans);
-line-height: 1.6;
--webkit-font-smoothing: antialiased;
+  background: #F2E8DA;
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 :focus-visible {
-outline: 2px solid var(–color-link);
-outline-offset: 2px;
-border-radius: 4px;
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 ::selection {
-background: rgb(142 197 255 / 45%);
+  background: rgb(142 197 255 / 45%);
 }
 
 .btn {
-display: inline-flex;
-align-items: center;
-gap: 0.45rem;
-padding: 0.55rem 1rem;
-border-radius: 999px;
-font-weight: 600;
-font-size: 0.9rem;
-border: 1px solid var(–color-line);
-background: #F2E8DA;
-transition: background-color .15s, border-color .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-line);
+  background: #F2E8DA;
+  transition: background-color .15s, border-color .15s;
 }
 
 .btn:hover {
-background: rgb(142 197 255 / 35%);
-border-color: var(–color-accent);
+  background: rgb(142 197 255 / 35%);
+  border-color: var(--color-accent);
 }
 
 .btn-primary {
-background: var(–color-accent);
-border-color: var(–color-accent);
-color: var(–color-fg);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-fg);
 }
 
 .btn-primary:hover {
-background: rgb(142 197 255 / 80%);
-border-color: var(–color-accent);
+  background: rgb(142 197 255 / 80%);
+  border-color: var(--color-accent);
 }
 
 .chip-sun {
-background: var(–color-sun);
-border-color: var(–color-sun-line);
-color: var(–color-fg);
+  background: var(--color-sun);
+  border-color: var(--color-sun-line);
+  color: var(--color-fg);
 }
 
 .chip {
-display: inline-block;
-border: 1px solid var(–color-line);
-border-radius: 999px;
-padding: 0.15rem 0.75rem;
-font-size: 0.85rem;
-color: var(–color-muted);
-background: #F2E8DA;
+  display: inline-block;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.15rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  background: #F2E8DA;
 }
 
 .draw {
-stroke-dasharray: 420;
-stroke-dashoffset: 420;
-animation: draw 1.8s .3s ease-out forwards;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation: draw 1.8s .3s ease-out forwards;
 }
 
 @keyframes draw {
-to {
-stroke-dashoffset: 0;
-}
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-html {
-scroll-behavior: auto;
-}
+  html {
+    scroll-behavior: auto;
+  }
 
-.draw {
-animation: none;
-stroke-dashoffset: 0;
-}
+  .draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 
-* {
+  * {
     transition: none !important;
-    }
+  }
 }
